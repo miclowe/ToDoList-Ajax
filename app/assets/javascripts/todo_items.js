@@ -52,7 +52,8 @@ $(document).ready(function() {
           };
         });
 
-        deleteBtn.on("click", function(){
+        deleteBtn.on("click", function(event){
+          event.preventDefault();
           var btn = $(this);
           btn.parent().fadeOut(800, function() {btn.parent().remove()});
           $.ajax({

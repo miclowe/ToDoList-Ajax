@@ -1,6 +1,8 @@
 TodolistAjax::Application.routes.draw do
   resources :todo_items
 
+  root :to => 'todo_items#new'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

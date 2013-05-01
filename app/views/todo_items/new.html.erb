@@ -16,7 +16,7 @@
         <%= check_box_tag 'todo_item_completed', 'todo_item[completed]' %>
         <%= todo_item.name %>
         <button class="deleteBtn"><span class="btnText">Remove</span></button>
-        <%#= button_to 'Remove', todo_item, method: :delete, :class => "deleteBtn", data: { confirm: 'Are you sure?' } %>
+        <%#= button_to 'Remove', todo_item, method: :delete, :remote => true, :class => "deleteBtn", data: { confirm: 'Are you sure?' } %>
       </li>
     <% end %>
   </ul>
