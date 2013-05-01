@@ -1,0 +1,38 @@
+
+<h1 class="center">To Do List</h1>
+
+<div id="main">
+  <h3>Add New To Do</h3>
+
+  <%= render 'form' %>
+
+</div>
+<div id="todoList">
+  <h3>To Do List</h3>
+  <span class="small_txt">You've got some work to do.</span>
+  <ul id="todoItems">    
+    <% @todo_items.each do |todo_item| %>
+      <li>
+        <%= check_box_tag 'todo_item_completed', 'todo_item[completed]' %>
+        <%= todo_item.name %>
+        <button class="deleteBtn"><span class="btnText">Remove</span></button>
+        <%#= button_to 'Remove', todo_item, method: :delete, :class => "deleteBtn", data: { confirm: 'Are you sure?' } %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+<div id="completedList">
+  <h3>Completed Items</h3><span class="small_txt">Good job</span>
+  <ul id="completedItems">
+    <% @todo_completed_items.each do |todo_completed_item| %>
+      <li>
+        <%= check_box_tag 'todo_item_completed', 'todo_item[completed]' %>
+        <%= todo_completed_item.name %>
+        <button class="deleteBtn"><span class="btnText">Remove</span></button>
+        <%#= button_to 'Remove', todo_completed_item, method: :delete, :class => "deleteBtn", data: { confirm: 'Are you sure?' } %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+
+<%#= link_to 'Back', todo_items_path %>

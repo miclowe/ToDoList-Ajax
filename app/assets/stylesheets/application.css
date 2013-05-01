@@ -1,0 +1,117 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #D1B0A8;
+  color: #165F63;
+  font-family: 'Arial', sans-serif;
+}
+
+#container {
+  margin: 60px auto;
+  width: 960px;
+}
+
+.center {
+  text-align: center;
+}
+
+ul li {
+  margin-top: 15px;
+}
+
+#main {
+  background-color: #FAF9F9;
+  border-radius: 6px;
+  margin: 20px 0;
+  padding: 15px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+}
+
+#todoItems, #completedItems {
+  list-style-type: none;
+}
+
+#todoList, #completedList {
+  background-color: #FAF9F9;
+  margin-top: 20px;
+  min-height: 100px;
+  padding: 15px;
+  width: 425px;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+}
+
+#todoList {
+  float: left;
+}
+
+#completedList {
+  float: right;
+}
+
+button {
+  background-color: #5D8E90;
+  border: none;
+  margin-left: 10px;
+  padding: 5px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+
+button:hover {
+  color: #FFF;
+}
+
+button img {
+  height: 20px;
+  vertical-align: bottom;
+  width: 20px;
+}
+
+button .btnText {
+  font-weight: bold;
+  padding: 0 5px 0 5px;
+  vertical-align: middle;
+}
+
+.deleteBtn {
+  float: right;
+}
+
+input[type="checkbox"] {
+  margin-right: 15px;
+}
+
+input[type="text"] {
+  line-height: 25px;
+  width: 500px;
+}
+
+.small_txt {
+  font-size: 12px;
+}
+
+.completed {
+  color: red;
+  text-decoration: line-through;
+}
